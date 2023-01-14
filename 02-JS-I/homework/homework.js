@@ -1,7 +1,7 @@
 // En estas primeras 6 preguntas, reemplaza `null` por la respuesta
 
 // Crea una variable "string", puede contener lo que quieras:
-const nuevaString = "hola";
+const nuevaString = 'hola';
 
 // Crea una variable numérica, puede ser cualquier número:
 const nuevoNum = 100;
@@ -31,65 +31,57 @@ function devolverString(str) {
   return str; 
 }
 
+
 function suma(x, y) {
   // "x" e "y" son números
   // Suma "x" e "y" juntos y devuelve el valor
   // Tu código:
-   var sumar = (x + y);
-   console.log(sumar) ;
+   return(x + y);
 }
 
 function resta(x, y) {
   // Resta "y" de "x" y devuelve el valor
   // Tu código:
-   var restar = (x - y);
-   console.log(restar);
+   return(x - y);
 }
 
 function multiplica(x, y) {
   // Multiplica "x" por "y" y devuelve el valor
   // Tu código:
-   var multiplicar = (x * y);
-   console.log(multiplicar);
+   return(x * y);
 }
 
 function divide(x, y) {
   // Divide "x" entre "y" y devuelve el valor
   // Tu código:
-  var dividir = (x / y);
-  console.log(dividir);
+   return(x / y);
+  
 }
 
 function sonIguales(x, y) {
   // Devuelve "true" si "x" e "y" son iguales
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (x == y) {
-    console.log(true);
+  if (x === y) {
+    return(true);
    } else {
-    console.log(false);}   
-}    
+   return(false);
+   }
+}  
 
 function tienenMismaLongitud(str1, str2) {
   // Devuelve "true" si las dos strings tienen la misma longitud
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (str1.length == str2.length) {
-      console.log(true);
-  } else {
-      console.log(false);
-  }  
+  return (str1.length === str2.length) 
+      
 }
 
 function menosQueNoventa(num) {
   // Devuelve "true" si el argumento de la función "num" es menor que noventa
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (num < 90) {
-    console.log(true);
-  } else {
-    console.log(false);
-  }
+  return(num < 90);
 }
 
 function mayorQueCincuenta(num) {
@@ -97,27 +89,26 @@ function mayorQueCincuenta(num) {
   // De lo contrario, devuelve "false"
   // Tu código:
   if (num > 50) {
-    console.log(true);
+    return(true);
   } else {
-    console.log(false);
+    return(false);
   }
 }
 
 function obtenerResto(x, y) {
   // Obten el resto de la división de "x" entre "y"
   // Tu código:
-     var resto = (x % y);
-     console.log(resto);
+     return x % y
 }
 
 function esPar(num) {
   // Devuelve "true" si "num" es par
   // De lo contrario, devuelve "false"
   // Tu código:
-  if ( num % 2 == 0){
-    console.log(true);
+  if ( num % 2 === 0){
+    return(true);
   } else {
-    console.log(false);
+    return(false);
   }
 }
 
@@ -125,10 +116,10 @@ function esImpar(num) {
   // Devuelve "true" si "num" es impar
   // De lo contrario, devuelve "false"
   // Tu código:
-  if ( num % 2 == 1){
-    console.log(true);
+  if ( num % 2 === 1){
+    return(true);
   } else {
-    console.log(false)
+    return(false);
   }
 }
 
@@ -136,42 +127,42 @@ function elevarAlCuadrado(num) {
   // Devuelve el valor de "num" elevado al cuadrado
   // ojo: No es raiz cuadrada!
   // Tu código:
-  var cuadrado = Math.pow(num,2);
-  console.log(cuadrado);
+  return Math.pow(num,2);
+  
 }
 
 function elevarAlCubo(num) {
   // Devuelve el valor de "num" elevado al cubo
   // Tu código:
-  var cubo = Math.pow(num,3);
-  console.log(cubo);
+  return Math.pow(num,3);
+  
 }
 
 function elevar(num, exponent) {
   // Devuelve el valor de "num" elevado al exponente dado en "exponent"
   // Tu código:
-  var elevo = Math.pow(num,exponent);
-  console.log(elevo);
+  return Math.pow(num,exponent);
+  
 }
 
 function redondearNumero(num) {
   // Redondea "num" al entero más próximo y devuélvelo
   // Tu código:
-  var randon = Math.round(num); 
-  console.log(randon);
+  return Math.round(num); 
+ 
 }
 
 function redondearHaciaArriba(num) {
   // Redondea "num" hacia arriba (al próximo entero) y devuélvelo
   // Tu código:
-  var redondear = Math.ceil(num);
-  console.log(redondear);
+  return Math.ceil(num);
+  
 }
 
 function numeroRandom() {
   //Generar un número al azar entre 0 y 1 y devolverlo
   //Pista: investigá qué hace el método Math.random()
-  console.log( Math.random(1));
+  return Math.random();
 }
 
 function esPositivo(numero) {
@@ -179,34 +170,37 @@ function esPositivo(numero) {
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
-  if (numero > 0){
-    console.log('"Es positivo"');
-  }else if (numero < 0 ){
-    console.log('"Es negativo"');
-  }else {
-    console.log("false");
+  if (numero === 0){
+    return false;
+  } 
+  else if (numero > 0) {
+    return ("Es positivo");
+  } 
+  else  {
+    return ("Es negativo");
   }
-}
+  }
 
 function agregarSimboloExclamacion(str) {
   // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
   // Ejemplo: "hello world" pasaría a ser "hello world!"
   // Tu código:
-  console.log('"' + str + '!' + '"');
+  return str + '!' ;
 }
 
 function combinarNombres(nombre, apellido) {
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
   // Ejemplo: "Soy", "Henry" -> "Soy Henry"
   // Tu código:
-  console.log('"' + nombre + ' ' + apellido + '"');
+  var combinar = nombre + ' ' + apellido;
+  return combinar;
 }
 
 function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
-  console.log('"' + 'Hola ' + nombre + '!' + '"');
+  return 'Hola ' + nombre + '!' ;
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
@@ -248,21 +242,14 @@ function esVocal(letra){
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
-  if (letra = "a") {
-    console.log("Es vocal");  
-  } else if (letra = "e") {
-    console.log("Es vocal");
-  } else if (letra = "i") {
-    console.log("Es vocal");
-  } else if (letra = "o") {
-    console.log("Es vocal");
-  } else if (letra = "u") {
-    console.log("Es vocal");
-  } else {
-    console.log("Dato incorrecto");
-  }
+  if (letra.lenght > 1) {
+   return "Dato incorrecto";
 }
-
+if(letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u"){
+  return "Es vocal"
+}
+return "Dato incorrecto"
+}
 
 
 // No modificar nada debajo de esta línea
